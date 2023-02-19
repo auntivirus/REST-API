@@ -24,11 +24,44 @@ Services:
 
         By defining such processing task in Injectable service class, you make those task available to any component. You can also make your applicaion more adaptable by injecting different providers of the same kind of service.
 
+        To generate service file: ng g service service_name
+
 Dependency Injection:
         It is a part of the Angular Framework that provides components with access to services and other resources.
+        
         Angular provides the ability to inject a service into component to give that component access to the service.
 
 @Injectable
         Defines a class as a service in Angular and allows Angular to inject into a component as a dependency.
 
+HttpClient:
+        It is a built-in service class available in the '@angular/common/http' package. It has multiple signatures and return types for each requests. It uses 'RxJS' observable REST api which means it returns the observable and what we need to subscribe it. This API was developed based on XML/HTTP request interface exposed by browsers.
+
+        Features of HttpClient:
+                i. It provides type request & response objects.
+                ii. It contains testability features.
+                iii. It intercepts request & response.
+                iv. It supports RxJS observable based APIs.
+                v. It also supports streamlined error handling.
+                vi It performs GET, POST, PUT, DELETE operations.
+RxJS Observable:
+        This observable is a unique object and is similar to 'Promise' and helps to manage asynchronous code. For this, we need the most popular observable library which is RxJS (Reactive Extensions for JavaScript).
+
+        HTTP GET Request:
+                It returns a fetch of the data. 
+                Syntax: this.http.get(url);
+        HTTP POST Request:
+                It is used to send data from the application to the server.
+                Syntax: this.http.post(url,data);
+        HTTP DELETE Request:
+                It is used to delete based on the parameter.
+                Syntax: this.http.delete(url+id);
+        HTTP PUT Request:
+                It is used to update the data based on the parameter.
+                Syntax: this.http.put(url+id,data);
+        
+Subscribe Method:
+        This method calls the observables that produces and emits data. Thus suscribing to an observable starts a flow of data between observable and observer.
+
+Command to start JSON Server - json-server filename
 */

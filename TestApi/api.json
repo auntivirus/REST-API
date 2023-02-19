@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "101",
+      "name": "Chirag",
+      "email": "chirag@oza.com",
+      "salary": 123456
+    },
+    {
+      "id": "102",
+      "name": "Chirageshwar",
+      "email": "chirageshwar@oza.com",
+      "salary": 789123
+    },
+    {
+      "id": "103",
+      "name": "Chiragkumar",
+      "email": "chiragkumar@oza.com",
+      "salary": 4567891
+    },
+    {
+      "id": "104",
+      "name": "Chiragji",
+      "email": "chiragji@oza.com",
+      "salary": 2345478
+    }
+  ]
+}
