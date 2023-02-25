@@ -1,28 +1,52 @@
 {
   "users": [
     {
-      "id": "101",
+      "id": 101,
       "name": "Chirag",
       "email": "chirag@oza.com",
       "salary": 123456
     },
     {
-      "id": "102",
+      "id": 102,
       "name": "Chirageshwar",
       "email": "chirageshwar@oza.com",
       "salary": 789123
     },
     {
-      "id": "103",
+      "id": 103,
       "name": "Chiragkumar",
       "email": "chiragkumar@oza.com",
       "salary": 4567891
     },
     {
-      "id": "104",
+      "id": 104,
       "name": "Chiragji",
       "email": "chiragji@oza.com",
       "salary": 2345478
+    },
+    {
+      "name": "Love Me Like You Do",
+      "email": "loveme@likeyou.do",
+      "salary": "123456",
+      "id": 105
+    },
+    {
+      "name": "Bruno Mars",
+      "email": "bruno@mars.com",
+      "salary": "4321",
+      "id": 106
+    },
+    {
+      "name": "ABCD EFGH",
+      "email": "abcd@efgh.com",
+      "salary": "6748",
+      "id": 107
+    },
+    {
+      "name": "fghdfhbf",
+      "email": "sdgds@email.com",
+      "salary": "574575475",
+      "id": 108
     }
   ]
 }

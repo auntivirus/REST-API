@@ -13,8 +13,12 @@ export class UserService {
 //   return user;
 // }
 constructor(private http: HttpClient) { }
-url = "https://jsonplaceholder.typicode.com/users";
+// url = "https://jsonplaceholder.typicode.com/users";
+url = "http://localhost:3000/users";
 getUsers() {
   return this.http.get(this.url);
+}
+saveNewUser(data:any) {
+  return this.http.post(this.url, data);
 }
 }
