@@ -8,16 +8,24 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./api.component.scss']
 })
 export class ApiComponent implements OnInit {
+  ngOnInit(): void {
+    this.getAllUsers();
+  }
   newDetails = new FormGroup( {
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required,Validators.email]),
     salary: new FormControl('', [Validators.required]),
   }
   );
-  myUser!: any;
+  myUser: any;
+  userDetail: any;
 
   constructor(private userService: UserService) {
     this.userService = userService;
+  }
+
+  getUserDetailsById(x: any) {
+   return this.userService.getUserById(x.id);
   }
 
   saveUser(userObj: any) {
@@ -30,6 +38,27 @@ export class ApiComponent implements OnInit {
       }, 
       err => {console.log(err)}
       );
+  }
+  userId!: number;
+  editUser(userObj: any) {
+    this.userId = userObj.id;
+    this.newDetails.controls.name.setValue(userObj.name);
+    this.newDetails.controls.email.setValue(userObj.email);
+    this.newDetails.controls.salary.setValue(userObj.salary);
+  }
+
+  updateExistingUser() {
+    this.userService.updateExistingUser(this.userId, this.newDetails.value).subscribe(
+      res => {
+        alert("User updated successfully");
+        this.newDetails.reset();
+        this.getAllUsers();
+      },
+      err => {
+        console.log(err);
+        alert("Error Updating User Details");
+      }
+    );
   }
 
   getAllUsers() {
@@ -52,9 +81,5 @@ export class ApiComponent implements OnInit {
         this.getAllUsers();
       }
     );
-  }
-
-  ngOnInit(): void {
-    this.getAllUsers();
   }
 }

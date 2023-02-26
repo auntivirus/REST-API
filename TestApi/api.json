@@ -1,16 +1,10 @@
 {
   "users": [
     {
-      "id": 101,
-      "name": "Chirag",
-      "email": "chirag@oza.com",
-      "salary": 123456
-    },
-    {
-      "id": 102,
-      "name": "Chirageshwar",
-      "email": "chirageshwar@oza.com",
-      "salary": 789123
+      "name": "Chirag Maharaj",
+      "email": "chirag@maharaj.com",
+      "salary": "666666",
+      "id": 102
     },
     {
       "id": 103,
@@ -25,9 +19,9 @@
       "salary": 2345478
     },
     {
-      "name": "Love Me Like You Do",
-      "email": "loveme@likeyou.do",
-      "salary": "123456",
+      "name": "LOLOLOL",
+      "email": "lolol@lolol.com",
+      "salary": "56472",
       "id": 105
     },
     {
@@ -47,6 +41,12 @@
       "email": "joshi@smit.com",
       "salary": "72358",
       "id": 108
+    },
+    {
+      "name": "5485189",
+      "email": "number@email.com",
+      "salary": "54300",
+      "id": 109
     }
   ]
 }
