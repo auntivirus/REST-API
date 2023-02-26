@@ -18,6 +18,11 @@ url = "http://localhost:3000/users";
 getUsers() {
   return this.http.get(this.url);
 }
+
+getUserById(id: number) {
+  return this.http.get(this.url+"/"+id);
+}
+
 saveNewUser(data:any) {
   return this.http.post(this.url, data);
 }
@@ -25,4 +30,9 @@ saveNewUser(data:any) {
 deleteUser(id: number) {
   return this.http.delete(this.url+"/"+id);
 }
+
+updateExistingUser(id: number, obj: any) {
+  return this.http.put(this.url+"/"+id,obj);
+}
+
 }
