@@ -41,6 +41,19 @@ export class ApiComponent implements OnInit {
     });
   }
 
+  deleteUser(id: number) {
+    this.userService.deleteUser(id).subscribe(
+      res => {
+        alert("Deleted successfully!!");
+        this.getAllUsers();
+      },
+      err => {
+        alert("Some error occured");
+        this.getAllUsers();
+      }
+    );
+  }
+
   ngOnInit(): void {
     this.getAllUsers();
   }

@@ -21,4 +21,8 @@ getUsers() {
 saveNewUser(data:any) {
   return this.http.post(this.url, data);
 }
+
+deleteUser(id: number) {
+  return this.http.delete(this.url+"/"+id);
+}
 }
